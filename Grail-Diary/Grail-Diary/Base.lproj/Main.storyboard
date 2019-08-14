@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Clues Table View Controller-->
+        <!--Is Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CluesTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddPOIModalSegue" id="Ozm-DX-gxr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="Ozm-DX-gxr" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ozm-DX-gxr" id="CCL-XU-eW8">
@@ -61,6 +61,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="gr6-Oa-fEl" id="wgs-Se-Avm"/>
+                                            <outlet property="countryLabel" destination="fxC-Y4-HFw" id="ugb-mQ-1cj"/>
+                                            <outlet property="locationLabel" destination="XC2-Qe-GZE" id="EMp-18-A1t"/>
                                             <segue destination="DjX-wO-XPS" kind="show" identifier="ShowPOIDetailSegue" id="ny5-j3-31p"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,15 +86,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cluesLabel" destination="gr6-Oa-fEl" id="ktJ-1t-sdC"/>
+                        <outlet property="countryLabel" destination="fxC-Y4-HFw" id="6Pg-LW-tOT"/>
+                        <outlet property="locationLabel" destination="XC2-Qe-GZE" id="Wl8-lB-6P8"/>
+                        <outlet property="tableView" destination="K40-pF-Ndy" id="B34-Ca-PXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1127.536231884058" y="754.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="O9u-7w-y0f">
             <objects>
-                <viewController id="DjX-wO-XPS" sceneMemberID="viewController">
+                <viewController id="DjX-wO-XPS" customClass="POIDetailViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1A-H7-eBi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="2141" y="763"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="rUM-Uc-JbT">
             <objects>
-                <viewController id="C6L-4p-faz" sceneMemberID="viewController">
+                <viewController id="C6L-4p-faz" customClass="AddPOIViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uZz-LT-OwQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
