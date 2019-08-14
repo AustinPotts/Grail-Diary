@@ -61,9 +61,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cluesLabel" destination="gr6-Oa-fEl" id="wgs-Se-Avm"/>
-                                            <outlet property="countryLabel" destination="fxC-Y4-HFw" id="ugb-mQ-1cj"/>
-                                            <outlet property="locationLabel" destination="XC2-Qe-GZE" id="EMp-18-A1t"/>
+                                            <outlet property="cluesLabel" destination="gr6-Oa-fEl" id="GFd-zL-vZm"/>
+                                            <outlet property="countryLabel" destination="fxC-Y4-HFw" id="kpr-ZR-IZp"/>
+                                            <outlet property="locationLabel" destination="XC2-Qe-GZE" id="WBm-fp-Gfr"/>
                                             <segue destination="DjX-wO-XPS" kind="show" identifier="ShowPOIDetailSegue" id="ny5-j3-31p"/>
                                         </connections>
                                     </tableViewCell>
@@ -87,9 +87,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cluesLabel" destination="gr6-Oa-fEl" id="ktJ-1t-sdC"/>
-                        <outlet property="countryLabel" destination="fxC-Y4-HFw" id="6Pg-LW-tOT"/>
-                        <outlet property="locationLabel" destination="XC2-Qe-GZE" id="Wl8-lB-6P8"/>
                         <outlet property="tableView" destination="K40-pF-Ndy" id="B34-Ca-PXd"/>
                     </connections>
                 </viewController>
@@ -235,6 +232,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Mi-vK-mSM"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="ESv-wI-QU4" id="4fh-Uw-Hxl"/>
+                        <outlet property="clue2TextField" destination="A3x-s8-ew7" id="Jyd-Lo-nIn"/>
+                        <outlet property="clue3TextField" destination="jdH-Lh-1mQ" id="1SJ-5j-BHz"/>
+                        <outlet property="countryTextField" destination="1ui-tO-BxF" id="RHo-zI-vhc"/>
+                        <outlet property="locationTextField" destination="px1-lR-nyt" id="EoM-1U-HjE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jlh-Tj-Yhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
